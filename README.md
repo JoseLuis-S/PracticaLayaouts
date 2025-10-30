@@ -1,41 +1,41 @@
 # Práctica de Jetpack Compose: Layouts y Gestión de Estado
 
 ***Nombre del alumno***:  
-José Luis Salado Horta  
+José Luis Salado Horta
 
 ***Asignatura***:  
-Desarrollo de Interfaces  
+Desarrollo de Interfaces
 
 ***Profesor/a:***  
-Fernando Macías Ramos  
+Fernando Macías Ramos
 
 ***Fecha de entrega:***  
-23 de octubre de 2025  
+23 de octubre de 2025
 
 ---
 
 ## Índice
 
-1. [Objetivo de la Práctica](#objetivo-de-la-práctica)  
-2. [Ejercicios Resueltos](#ejercicios-resueltos)  
-   - [Ejercicio 1: Ficha de producto con texto variable (Barreras)](#ejercicio-1--ficha-de-producto-con-texto-variable-barreras)  
-   - [Ejercicio 2: Acciones principales en una barra (Cadenas)](#ejercicio-2--acciones-principales-en-una-barra-cadenas)  
-   - [Ejercicio 3: Cambiando colores con estado](#ejercicio-3--cambiando-colores-con-estado)  
-   - [Ejercicio 4: Contador doble con lógica condicional](#ejercicio-4--contador-doble-con-lógica-condicional)  
-   - [Ejercicio 5: Interruptor de visibilidad](#ejercicio-5--interruptor-de-visibilidad)  
-3. [Ejercicio Extra: Tarjeta de Evento Interactiva](#ejercicio-extra--tarjeta-de-evento-interactiva)  
-4. [Tecnologías y Conceptos Clave](#tecnologías-y-conceptos-clave)  
+1. [Objetivo de la Práctica](#objetivo-de-la-práctica)
+2. [Ejercicios Resueltos](#ejercicios-resueltos)
+    - [Ejercicio 1: Ficha de producto con texto variable (Barreras)](#ejercicio-1--ficha-de-producto-con-texto-variable-barreras)
+    - [Ejercicio 2: Acciones principales en una barra (Cadenas)](#ejercicio-2--acciones-principales-en-una-barra-cadenas)
+    - [Ejercicio 3: Cambiando colores con estado](#ejercicio-3--cambiando-colores-con-estado)
+    - [Ejercicio 4: Contador doble con lógica condicional](#ejercicio-4--contador-doble-con-lógica-condicional)
+    - [Ejercicio 5: Interruptor de visibilidad](#ejercicio-5--interruptor-de-visibilidad)
+3. [Ejercicio Extra: Tarjeta de Evento Interactiva](#ejercicio-extra--tarjeta-de-evento-interactiva)
+4. [Tecnologías y Conceptos Clave](#tecnologías-y-conceptos-clave)
 
 ---
 
 ## Objetivo de la Práctica
 
-El objetivo principal de esta práctica es aplicar conceptos avanzados de ConstraintLayout en Jetpack Compose, como barreras (barriers) y cadenas (chains), junto con una sólida gestión de estado.  
+El objetivo principal de esta práctica es aplicar conceptos avanzados de ConstraintLayout en Jetpack Compose, como barreras (barriers) y cadenas (chains), junto con una sólida gestión de estado.
 
-El fin es resolver escenarios comunes en el desarrollo de interfaces de usuario modernas:  
-- Crear alineaciones que dependen dinámicamente de la longitud del contenido.  
-- Distribuir elementos de forma equilibrada y responsiva.  
-- Gestionar y persistir datos en la UI ante recomposiciones y cambios de configuración (como la rotación del dispositivo).  
+El fin es resolver escenarios comunes en el desarrollo de interfaces de usuario modernas:
+- Crear alineaciones que dependen dinámicamente de la longitud del contenido.
+- Distribuir elementos de forma equilibrada y responsiva.
+- Gestionar y persistir datos en la UI ante recomposiciones y cambios de configuración (como la rotación del dispositivo).
 
 ---
 
@@ -46,15 +46,15 @@ El fin es resolver escenarios comunes en el desarrollo de interfaces de usuario 
 **Enunciado**  
 Diseña una tarjeta de producto con: imagen, título (longitud variable), precio y un botón “Comprar”.
 
-- El botón debe alinearse a la derecha de una barrera creada con el título y el precio, de forma que nunca se solape aunque el título sea largo.  
-- Pide un margen uniforme entre el grupo de texto y el botón.  
-- Comprueba con títulos cortos y largos que la alineación se mantiene.  
+- El botón debe alinearse a la derecha de una barrera creada con el título y el precio, de forma que nunca se solape aunque el título sea largo.
+- Pide un margen uniforme entre el grupo de texto y el botón.
+- Comprueba con títulos cortos y largos que la alineación se mantiene.
 
-**Fragmento clave del código**  
+**Fragmento clave del código**
 
 https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7327957991073/app/src/main/java/com/alberti/practicaestados/Ejercicio1.kt#L21-L75
 
-**Previsualización**  
+**Previsualización**
 ```kotlin
 @Preview(showBackground = true)
 @Composable
@@ -75,14 +75,14 @@ fun ProductCardPreview() {
 **Enunciado**  
 Crea una barra con tres acciones (solo texto, sin iconos): por ejemplo “Explorar”, “Favoritos”, “Perfil”.
 
-- Colócalas en una cadena horizontal y prueba tres estilos: Spread, SpreadInside y Packed.  
-- Justifica cuál elegirías para una barra de navegación inferior y por qué mejora la usabilidad.  
+- Colócalas en una cadena horizontal y prueba tres estilos: Spread, SpreadInside y Packed.
+- Justifica cuál elegirías para una barra de navegación inferior y por qué mejora la usabilidad.
 
-**Fragmento clave del código**  
+**Fragmento clave del código**
 
 https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7327957991073/app/src/main/java/com/alberti/practicaestados/Ejercicio2.kt#L14-L43
 
-**Previsualización**  
+**Previsualización**
 ```kotlin
 @Composable
 fun BarraEstilos() {
@@ -112,16 +112,16 @@ fun BarraEstilosPreview() {
 ### Ejercicio 3 – Cambiando colores con estado
 
 **Enunciado**  
-Crea una pantalla con un botón y un cuadro de color (`Box`).  
+Crea una pantalla con un botón y un cuadro de color (`Box`).
 
-- Cada vez que pulses el botón, el color del cuadro debe cambiar aleatoriamente entre varios colores (por ejemplo, rojo, verde, azul o amarillo).  
-- Muestra también el nombre del color actual en un texto.  
+- Cada vez que pulses el botón, el color del cuadro debe cambiar aleatoriamente entre varios colores (por ejemplo, rojo, verde, azul o amarillo).
+- Muestra también el nombre del color actual en un texto.
 
-**Fragmento clave del código**  
+**Fragmento clave del código**
 
 https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7327957991073/app/src/main/java/com/alberti/practicaestados/Ejercicio3.kt#L25-L61
 
-**Previsualización**  
+**Previsualización**
 ```kotlin
 @Preview(showBackground = true)
 @Composable
@@ -137,16 +137,16 @@ fun PantallaColoresPreview() {
 ### Ejercicio 4 – Contador doble con lógica condicional
 
 **Enunciado**  
-Crea una vista con dos botones: uno que sume y otro que reste un valor.  
+Crea una vista con dos botones: uno que sume y otro que reste un valor.
 
-- El valor actual se muestra en el centro de la pantalla.  
-- El botón de restar debe deshabilitarse si el contador llega a 0.  
+- El valor actual se muestra en el centro de la pantalla.
+- El botón de restar debe deshabilitarse si el contador llega a 0.
 
-**Fragmento clave del código**  
+**Fragmento clave del código**
 
 https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7327957991073/app/src/main/java/com/alberti/practicaestados/Ejercicio4.kt#L23-L57
 
-**Previsualización**  
+**Previsualización**
 ```kotlin
 @Preview(showBackground = true)
 @Composable
@@ -162,16 +162,16 @@ fun PantallaContadorPreview() {
 ### Ejercicio 5 – Interruptor de visibilidad
 
 **Enunciado**  
-Crea una pantalla con un texto y un botón que permita mostrar u ocultar ese texto.  
+Crea una pantalla con un texto y un botón que permita mostrar u ocultar ese texto.
 
-- El botón debe cambiar su etiqueta según el estado actual (“Mostrar texto” / “Ocultar texto”).  
-- El texto solo debe renderizarse cuando el estado sea “visible”.  
+- El botón debe cambiar su etiqueta según el estado actual (“Mostrar texto” / “Ocultar texto”).
+- El texto solo debe renderizarse cuando el estado sea “visible”.
 
-**Fragmento clave del código**  
+**Fragmento clave del código**
 
 https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7327957991073/app/src/main/java/com/alberti/practicaestados/Ejercicio5.kt#L21-L45
 
-**Previsualización**  
+**Previsualización**
 ```kotlin
 @Preview(showBackground = true)
 @Composable
@@ -187,13 +187,13 @@ fun PantallaTextoVisiblePreview() {
 ### Ejercicio Extra – Tarjeta de Evento Interactiva
 
 **Enunciado**  
-Diseña una tarjeta de evento que sea visualmente atractiva y funcionalmente robusta.  
+Diseña una tarjeta de evento que sea visualmente atractiva y funcionalmente robusta.
 
-- **Cabecera visual:** Muestra una imagen del evento con título y subtítulo/fecha. Los textos deben adaptarse a longitudes variables sin solaparse.  
-- **Cuerpo:** Incluye una descripción y una fila de acciones ("Interesa", "Compartir", "Guardar") distribuidas horizontalmente.  
-- **Pie interactivo:** Contador de "Personas interesadas" con botones para incrementar/decrementar y un botón "Mostrar más / Mostrar menos" que alterna la visibilidad de una descripción secundaria.  
+- **Cabecera visual:** Muestra una imagen del evento con título y subtítulo/fecha. Los textos deben adaptarse a longitudes variables sin solaparse.
+- **Cuerpo:** Incluye una descripción y una fila de acciones ("Interesa", "Compartir", "Guardar") distribuidas horizontalmente.
+- **Pie interactivo:** Contador de "Personas interesadas" con botones para incrementar/decrementar y un botón "Mostrar más / Mostrar menos" que alterna la visibilidad de una descripción secundaria.
 
-**Fragmento clave del código**  
+**Fragmento clave del código**
 
 https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7327957991073/app/src/main/java/com/alberti/practicaestados/EventCard.kt#L24-L132
 
@@ -201,7 +201,7 @@ https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7
 
 https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7327957991073/app/src/main/java/com/alberti/practicaestados/EventFooter.kt#L24-L92
 
-**Previsualización**  
+**Previsualización**
 ```kotlin
 @Preview(
     name = "Tarjeta con texto corto",
@@ -246,12 +246,12 @@ fun EventCardPreview_TextoLargo() {
 
 ## 🛠️ Tecnologías y Conceptos Clave
 
-- **Jetpack Compose:** El framework de UI declarativo y moderno de Android.  
-- **ConstraintLayout en Compose:** Para la creación de layouts complejos y responsivos.  
-- **Barriers:** Para alinear elementos respecto a un grupo de tamaño variable.  
-- **Chains:** Para distribuir elementos en una dimensión.  
-- **Gestión de Estado:**  
-  - `remember`: Para mantener el estado durante las recomposiciones.  
-  - `rememberSaveable`: Para persistir el estado a través de cambios de configuración.  
-  - `mutableStateOf / mutableIntStateOf`: Para crear estados observables.  
+- **Jetpack Compose:** El framework de UI declarativo y moderno de Android.
+- **ConstraintLayout en Compose:** Para la creación de layouts complejos y responsivos.
+- **Barriers:** Para alinear elementos respecto a un grupo de tamaño variable.
+- **Chains:** Para distribuir elementos en una dimensión.
+- **Gestión de Estado:**
+    - `remember`: Para mantener el estado durante las recomposiciones.
+    - `rememberSaveable`: Para persistir el estado a través de cambios de configuración.
+    - `mutableStateOf / mutableIntStateOf`: Para crear estados observables.
 - **Renderizado Condicional:** Uso de lógica `if` para añadir o quitar `Composables` del árbol de la UI.
