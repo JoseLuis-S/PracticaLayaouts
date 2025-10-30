@@ -51,7 +51,8 @@ Diseña una tarjeta de producto con: imagen, título (longitud variable), precio
 - Comprueba con títulos cortos y largos que la alineación se mantiene.  
 
 **Fragmento clave del código**  
-Aquí va un permalink.
+
+https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7327957991073/app/src/main/java/com/alberti/practicaestados/Ejercicio1.kt#L21-L75
 
 **Previsualización**  
 ```kotlin
@@ -78,7 +79,8 @@ Crea una barra con tres acciones (solo texto, sin iconos): por ejemplo “Explor
 - Justifica cuál elegirías para una barra de navegación inferior y por qué mejora la usabilidad.  
 
 **Fragmento clave del código**  
-Aquí va un permalink.
+
+https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7327957991073/app/src/main/java/com/alberti/practicaestados/Ejercicio2.kt#L14-L43
 
 **Previsualización**  
 ```kotlin
@@ -116,7 +118,8 @@ Crea una pantalla con un botón y un cuadro de color (`Box`).
 - Muestra también el nombre del color actual en un texto.  
 
 **Fragmento clave del código**  
-Aquí va un permalink.
+
+https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7327957991073/app/src/main/java/com/alberti/practicaestados/Ejercicio3.kt#L25-L61
 
 **Previsualización**  
 ```kotlin
@@ -140,7 +143,8 @@ Crea una vista con dos botones: uno que sume y otro que reste un valor.
 - El botón de restar debe deshabilitarse si el contador llega a 0.  
 
 **Fragmento clave del código**  
-Aquí va un permalink.
+
+https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7327957991073/app/src/main/java/com/alberti/practicaestados/Ejercicio4.kt#L23-L57
 
 **Previsualización**  
 ```kotlin
@@ -164,7 +168,8 @@ Crea una pantalla con un texto y un botón que permita mostrar u ocultar ese tex
 - El texto solo debe renderizarse cuando el estado sea “visible”.  
 
 **Fragmento clave del código**  
-Aquí va un permalink.
+
+https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7327957991073/app/src/main/java/com/alberti/practicaestados/Ejercicio5.kt#L21-L45
 
 **Previsualización**  
 ```kotlin
@@ -189,7 +194,12 @@ Diseña una tarjeta de evento que sea visualmente atractiva y funcionalmente rob
 - **Pie interactivo:** Contador de "Personas interesadas" con botones para incrementar/decrementar y un botón "Mostrar más / Mostrar menos" que alterna la visibilidad de una descripción secundaria.  
 
 **Fragmento clave del código**  
-Aquí va un permalink.
+
+https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7327957991073/app/src/main/java/com/alberti/practicaestados/EventCard.kt#L24-L132
+
+https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7327957991073/app/src/main/java/com/alberti/practicaestados/EventActions.kt#L17-L70
+
+https://github.com/JoseLuis-S/PracticaLayaouts/blob/f0fa8fadc2cb1bb23a42a4a9c8d7327957991073/app/src/main/java/com/alberti/practicaestados/EventFooter.kt#L24-L92
 
 **Previsualización**  
 ```kotlin
